@@ -63,25 +63,29 @@ FIN
 ## Tabla de trazado
 
 **Datos de prueba**
+
 - N = 5
 - Tiempos ingresados: **150, 300, 180, 250, 120**
 
 | Evento | i | tiempo | tiempos[i] | suma | lentas | promedio |
 |--------|---:|--------:|-----------:|------:|--------:|----------:|
-| Inicio | - | - | - | 0 | 0 | - |
+| Inicio | - | - | - | - | - | - |
 | PARA i=1, LEER tiempo | 1 | 150 | 150 | - | - | - |
 | PARA i=2, LEER tiempo | 2 | 300 | 300 | - | - | - |
 | PARA i=3, LEER tiempo | 3 | 180 | 180 | - | - | - |
 | PARA i=4, LEER tiempo | 4 | 250 | 250 | - | - | - |
 | PARA i=5, LEER tiempo | 5 | 120 | 120 | - | - | - |
+| Inicialización de acumuladores | - | - | - | 0 | 0 | - |
 | Procesamiento i=1 | 1 | - | 150 | 0 → 150 | 0 | - |
 | Procesamiento i=2 | 2 | - | 300 | 150 → 450 | 1 | - |
 | Procesamiento i=3 | 3 | - | 180 | 450 → 630 | 1 | - |
 | Procesamiento i=4 | 4 | - | 250 | 630 → 880 | 2 | - |
 | Procesamiento i=5 | 5 | - | 120 | 880 → 1000 | 2 | - |
-| **Resultados finales** | **-** | **-** | **-** | **1000** | **2** | **200** |
+| Cálculo del promedio | - | - | - | 1000 | 2 | 1000 / 5 = 200 |
+| **Resultados finales** | **-** | **-** | **-** | **1000** | **2** | **200 ms** |
 
 **Resultados obtenidos**
+
 - Suma total: **1000 ms**
 - Tiempo promedio: **200 ms**
-- Respuestas lentas (> 200 ms): **2**
+- Respuestas lentas mayores a 200 ms: **2**
